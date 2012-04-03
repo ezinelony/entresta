@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+	{% block container %}
+	<div class="container">
+			<h1 class="unselectable">entrestar</h1>
+			<form class="form" action="explore.html">
+				<input type="search" placeholder="job, skills, location, industry, startup, product...">
+			</form>
+			<div id="startupCarousel">
+				<ul class="jcarousel-skin-tango">
+					
+				    <li><img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/58/199481218_264ce20da0_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/60/199480111_87d4cb3e38_s.jpg" width="100" height="100" alt="" /></li>
+				    <li><img src="http://static.flickr.com/70/229228324_08223b70fa_s.jpg" width="100" height="100" alt="" /></li>
+				</ul>
+			</div>
+		 	{% if  not user.is_authenticated %}
+			<div id="joinButtons">
+				<h2>join us</h2>
+				<a class="register btn btn-large" data-toggle="modal" href="/users/student_join">Students</a>
+				<a class="register btn btn-large" data-toggle="modal" href="/users/startup_join">Startups</a>
+			</div>
+			{% endif %}
+		</div>
+		 
+		<script type="text/javascript">
+			$(function() {
+				
+				/*
+				 * State:
+				 * 	0: logged off
+				 *  1: logged in as student
+				 * 	2: logged in as startup
+				 */
+				var state = 0;
+				/*
+				switch (state) {
+					case 0:
+						$('.logged-in-links').hide();
+						break;
+					case 1:
+						$('.logged-out-links').hide();
+						$('#joinButtons').hide();
+						break; 
+					case 2:
+						$('.logged-out-links').hide();
+						$('#joinButtons').hide();
+						break;
+					default:
+						alert('No such state');
+						break;
+				}
+				
+				$('#studentJoinModal').hide();
+				$('#startupJoinModal').hide();
+				$('#loginModal').hide();
+				*/
+			    $('#startupCarousel ul').jcarousel({
+			    	'wrap'   : 'circular',
+			    	'scroll' : 1,
+			    	'visible': 3
+			    });
+			    $(".join").click(function(){
+			    
+			    	
+			    	
+			    	if($("#startupJoinModal").css('display') !=='none')
+			    	{
+			    		var type="Company";
+			    		var name=$("#name").val().trim();
+			    		var email=$("#startup_email").val().trim();
+			    		var password=$("#startup_password").val().trim();
+			    		if(name.length==0|| email.length==0|| password.length==0)
+			    			{ // display some error
+			    				return;
+			    			}
+			    			
+			    	}
+			    	else
+			    	{
+			    	 
+			    	 	var type="Student";
+			    		var email=$("#email").val().trim();
+			    		var password=$("#password").val().trim();
+			    		if(  email.length==0|| password.length==0)
+			    			{ // display some error
+			    				return;
+			    			}
+			    	}
+			    	
+	 
+			    $.ajax({
+			    headers:{"X-CSRFToken":getCookie('csrftoken')},
+			    type:'POST',
+		        url: "users/signup",
+		        data: {"email":email,"password":password,"async":1,"type":type},
+		         
+		        success: function(data)
+				{
+
+					alert(data);
+		        }
+		      });
+
+     
+			    });
+			});
+		</script>
+	{% endblock %}
+	</body>
+</html>

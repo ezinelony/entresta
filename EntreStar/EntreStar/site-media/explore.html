@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>entrestar - Home</title>
+		<meta name="author" content="Stelios" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="lib/jcarousel/skins/tango/skin.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/explore.css" />
+		
+		<script type="text/javascript" src="lib/jquery/js/jquery.js"></script>
+		<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="lib/jcarousel/lib/jquery.jcarousel.min.js"></script>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+		    	<div class="container">
+		      		<a class="brand" href="index.html">entrestar</a>
+			    	<ul class="nav">
+							<li><a href="index.html">Home</a></li>
+						  	<li class="active"><a href="explore.html">Explore</a></li>
+						  	<li class="logged-in-links"><a href="profile.html">Profile</a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class="dropdown logged-out-links">
+					    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					    		Join
+					        	<b class="caret"></b>
+					    	</a>
+					    	<ul class="dropdown-menu">
+					      		<li><a data-toggle="modal" href="#studentJoinModal">Students</a></li>
+					      		<li><a data-toggle="modal" href="#startupJoinModal">Startups</a></li>
+					    	</ul>
+					  	</li>
+					  	<li class="logged-out-links"><a data-toggle="modal" href="#loginModal">Login</a></li>
+						<li class="dropdown logged-in-links">
+					    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					    		Account
+					        	<b class="caret"></b>
+					    	</a>
+					    	<ul class="dropdown-menu">
+					      		<li><a href="#">Settings</a></li>
+					      		<li><a href="#">Logout</a></li>
+					    	</ul>
+					  	</li>
+					</ul>
+		    	</div>
+	  		</div>
+		</div>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span3 filter">
+					<h2>Filter</h2>
+			      	<form class="form">
+			      		<input type="text" placeholder="job">
+						<input type="text" placeholder="skills">
+					  	<input type="text" placeholder="location">
+					  	<input type="text" placeholder="industry">
+					  	<input type="text" placeholder="misc (startup, product, etc)">
+					</form>
+				</div>
+				<div class="span9 results">
+					<div class="row-fluid result">
+						<div class="span1">
+							<a class="result-img" href="#">
+								<img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="50" height="50" alt="" />
+							</a>
+						</div>
+						<div class="span11">
+							<a class="result-title" href="#"><h2>Formlabs</h2></a>
+							<div class="result-description">A high quality, low cost 3D printer that works out of the box.</div>
+							<table class="table result-jobs">
+								<tbody>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">UX Designer</a></td>
+										<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">Software Engineer</a></td>
+										<td class="result-job-skills">C#, Python</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="row-fluid result">
+						<div class="span1">
+							<a class="result-img" href="#">
+								<img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="50" height="50" alt="" />
+							</a>
+						</div>
+						<div class="span11">
+							<a class="result-title" href="#"><h2>Formlabs</h2></a>
+							<div class="result-description">A high quality, low cost 3D printer that works out of the box.</div>
+							<table class="table result-jobs">
+								<tbody>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">UX Designer</a></td>
+										<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">Software Engineer</a></td>
+										<td class="result-job-skills">C#, Python</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="row-fluid result">
+						<div class="span1">
+							<a class="result-img" href="#">
+								<img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="50" height="50" alt="" />
+							</a>
+						</div>
+						<div class="span11">
+							<a class="result-title" href="#"><h2>Formlabs</h2></a>
+							<div class="result-description">A high quality, low cost 3D printer that works out of the box.</div>
+							<table class="table result-jobs">
+								<tbody>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">UX Designer</a></td>
+										<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">Software Engineer</a></td>
+										<td class="result-job-skills">C#, Python</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="row-fluid result">
+						<div class="span1">
+							<a class="result-img" href="#">
+								<img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="50" height="50" alt="" />
+							</a>
+						</div>
+						<div class="span11">
+							<a class="result-title" href="#"><h2>Formlabs</h2></a>
+							<div class="result-description">A high quality, low cost 3D printer that works out of the box.</div>
+							<table class="table result-jobs">
+								<tbody>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">UX Designer</a></td>
+										<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">Software Engineer</a></td>
+										<td class="result-job-skills">C#, Python</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="row-fluid result">
+						<div class="span1">
+							<a class="result-img" href="#">
+								<img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="50" height="50" alt="" />
+							</a>
+						</div>
+						<div class="span11">
+							<a class="result-title" href="#"><h2>Formlabs</h2></a>
+							<div class="result-description">A high quality, low cost 3D printer that works out of the box.</div>
+							<table class="table result-jobs">
+								<tbody>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">UX Designer</a></td>
+										<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+									<tr class="result-job">
+										<td class="result-job-title"><a href="#">Software Engineer</a></td>
+										<td class="result-job-skills">C#, Python</td>
+										<td class="result-job-location">San Francisco</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="btn">More</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal" id="loginModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>login</h3>
+		  	</div>
+		  	<div class="modal-body">
+		    	<form class="form">
+		    		<input type="email" placeholder="email">
+		    		<br />
+		    		<input type="password" placeholder="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="btn btn-large">Close</a>
+		    	<a href="#" class="btn btn-primary btn-large">Login</a>
+		  	</div>
+		</div>
+		
+		<div class="modal" id="studentJoinModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>new student account</h3>
+		  	</div>
+		  	<div class="modal-body">
+		    	<form class="form">
+		    		<input type="email" placeholder="email">
+		    		<br />
+		    		<input type="password" placeholder="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="btn btn-large">Close</a>
+		    	<a href="#" class="btn btn-primary btn-large">Join</a>
+		  	</div>
+		</div>
+		
+		<div class="modal" id="startupJoinModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>new startup account</h3>
+		  	</div>
+		  	<div class="modal-body">
+		    	<form class="form">
+		    		<input type="text" placeholder="startup name">
+		    		<br />
+		    		<input type="email" placeholder="email">
+		    		<br />
+		    		<input type="password" placeholder="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="btn btn-large">Close</a>
+		    	<a href="#" class="btn btn-primary btn-large">Join</a>
+		  	</div>
+		</div>
+		<script type="text/javascript">
+		
+			$(function() {
+				
+				/*
+				 * State:
+				 * 	0: logged off
+				 *  1: logged in as student
+				 * 	2: logged in as startup
+				 */
+				var state = 0;
+				
+				switch (state) {
+					case 0:
+						$('.logged-in-links').hide();
+						break;
+					case 1:
+						$('.logged-out-links').hide();
+						break; 
+					case 2:
+						$('.logged-out-links').hide();
+						break;
+					default:
+						alert('No such state');
+						break;
+				}
+				
+				$('#studentJoinModal').hide();
+				$('#startupJoinModal').hide();
+				$('#loginModal').hide();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends "popup.html" %}
+	{% block content %}
+<div class="modal" id="studentJoinModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>Login</h3>
+		  	</div>
+		  	<div class="modal-body">
+		  	<div id="msg"></div>
+		  	
+		    	<form class="form" >
+		    		<input type="email" placeholder="email" name="email" id="email">
+		    		<br />
+		    		<input type="password" placeholder="password" name="password" id="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="close btn btn-large">Close</a>
+		    	<a href="#" class="join btn btn-primary btn-large">Join</a>
+		  	</div>
+</div>
+<script type="text/javascript">
+
+closeBox();
+$(".join").click(function(){
+			    
+ 
+	    		var type="Student"; 
+	    		var email=$("#email").val().trim();
+	    		var password=$("#password").val().trim();
+	    		if(email.length==0|| password.length==0)
+	    			{ // display some error
+	    				alert("Please fill in all fields");
+	    				return;
+	    			}
+			    		
+			    $.ajax({
+			    headers:{"X-CSRFToken":getCookie('csrftoken')},
+			    type:'POST',
+		        url: "/users/login",
+		        data: {"email":email,"password":password,"async":1},		         
+		        success: function(response)
+				{
+					
+					if(response.error !=0)
+					{
+						$("#msg").html(response.message);
+						$("#msg").css("background","pink");
+					}
+					else
+					{
+						if(next != undefined && next.trim().length >0)
+							location.href=next
+						else
+							location.href=response.link;
+							
+					}
+						
+		        }
+		      });
+
+     
+			    });
+			    </script>
+{% endblock %}

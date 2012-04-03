@@ -1,0 +1,42 @@
+/*********************************************************
+ * Explore.html
+ *********************************************************/
+
+.filter, .results {
+	margin-top: 40px;
+}
+
+.filter h2 {
+	margin-bottom: 20px;
+}
+
+.filter input {
+	height: 25px;
+	font-size: 14px;
+}
+
+.result {
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+.result-img img {
+	margin-top: 10px;
+}
+
+.result-title h2 {
+	font-size: 1.4em;
+}
+
+.result-description {
+	font-size: 1.1em;
+}
+
+.result-jobs {
+	margin-top: 10px;
+}
+
+.results .btn {
+	margin-left: 30px;
+	width: 100%;
+}

@@ -1,0 +1,55 @@
+/*********************************************************
+ * 1. Generic Styling
+ *********************************************************/
+
+/*
+ * 1.1. Background and Font
+ */
+
+body {
+	background-image: url("../img/bgnoise_lg.png");
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * 1.2. Navbar customization
+ */
+
+.navbar .navbar-inner {
+	padding-left: 0;
+	padding-right: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.navbar .container {
+	width: 940px;
+}
+
+#studentJoinModal,
+#startupJoinModal,
+#loginModal {
+	text-align: center;
+}
+
+#studentJoinModal input,
+#startupJoinModal input,
+#loginModal input {
+	display: inline-block;
+	font-size: 16px;
+	height: 30px;
+	width: 300px;
+}
+
+/*********************************************************
+ * 2. Utilities
+ *********************************************************/
+
+.unselectable { 
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none;
+	cursor: default;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>entrestar - Home</title>
+		<meta name="author" content="Stelios" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="/site-media/lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/site-media/lib/jcarousel/skins/tango/skin.css" />
+		<link rel="stylesheet" type="text/css" href="/site-media/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/site-media/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="/site-media/lib/js/colorbox/colorbox.css" />
+		
+		
+		<script type="text/javascript" src="/site-media/lib/jquery/js/jquery.js">
+
+		</script>
+		<script type="text/javascript" src="/site-media/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/site-media/lib/jcarousel/lib/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="/site-media/lib/js/crftoken.js"></script>
+		<script type="text/javascript" src="/site-media/lib/js/colorbox/jquery.colorbox.js"></script>
+		<script type="text/javascript" src="/site-media/lib/js/utility.js"></script>
+		<script type="text/javascript" src="/site-media/lib/js/jquery.json-2.3.min.js"></script>
+		
+	</head>
+	<body>
+		{% csrf_token %}
+		<div class="navbar">
+			<div class="navbar-inner">
+		    	<div class="container">
+		      		<a class="brand" href="index.html">entrestar</a>
+			    	<ul class="nav">
+							<li class="active"><a href="index.html">Home</a></li>
+						  	<li><a href="explore.html">Explore</a></li>
+						  	{% if  user.is_authenticated %}
+						  		<li class="logged-in-links"><a href="index.html">Profile</a></li>
+					  		{% endif %}
+					</ul>
+					<ul class="nav pull-right">
+					{% if not user.is_authenticated %}
+						<li class="dropdown logged-out-links">
+					    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					    		Join
+					        	<b class="caret"></b>
+					    	</a>
+					    	<ul class="dropdown-menu">
+					      		<li><a href="/users/student_join" class="register">Students</a></li>
+					      		<li><a href="/users/startup_join" class="register">Startups</a></li>
+					    	</ul>
+					    	
+					  	</li>
+					  		 
+					  		<li class="logged-out-links"><a href="/users/login" class="login" id="top_login">Login</a></li>
+					  	<script type="text/javascript">
+							$(function()
+							{
+								loadBox("login",540,450,530,480,false);
+								loadBox("register",540,450,530,480,false);
+								var colorbox = jQuery.colorbox;
+								
+							});
+						</script>
+							{% if popup_login %}
+								<script type="text/javascript">
+								$(function()
+								{
+									$("#top_login").click();
+									next= "{{next}}"
+								});
+							</script>
+							{% endif %}
+					  	{% else %}
+							<li class="dropdown logged-in-links">
+						    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						    		Account
+						        	<b class="caret"></b>
+						    	</a>
+						    	<ul class="dropdown-menu">
+						      		<li><a href="#">Settings</a></li>
+						      		<li><a href="/users/logout">Logout</a></li>
+						    	</ul>
+						  	</li>
+					  	{% endif %}
+					</ul>
+		    	</div>
+	  		</div>
+		</div>
+	{% block container %}
+
+	
+	{% endblock %}

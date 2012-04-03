@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block top-nav %}
+<p>top navigation is here</p>
+	
+{% endblock %}
+
+{% block main-content %}
+	<p>This is the main content</p>
+	
+	<div id="content">
+		<div id="gallery">
+			<div>
+				<a href="users/signup"> 
+					Create Account
+				</a>
+			</div>
+			OR	
+			
+			<div>
+			<div id="fb-root"></div>
+			    <script>
+			    facebook=new Facebook("{{FACEBOOK_API_ID}}","fb-root")
+			    facebook.setup(alertt,alertt,alertt,alertt);
+     
+    </script>
+			
+			</div>
+			<div id="facebook">
+				<div id="login_with_fb">
+					
+					<fb:login-button scope="email,  user_checkins">Login via facebook </fb:login-button>
+					<script>
+					
+					</script>
+				</div>
+			</div>
+			<div>
+			Already a Member? <a href="/users/login">Login </a>
+			</div>	
+		</div>
+	</div>
+{% endblock %}
+
+{% block bottom-nav %}
+	<p>bottom navigation is going to be here</p>
+{% endblock %}

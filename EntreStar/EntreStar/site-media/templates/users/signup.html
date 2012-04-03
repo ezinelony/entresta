@@ -1,0 +1,46 @@
+
+{% extends 'base.html' %}
+
+{% block main-header %}
+<p>main header is here</p>
+{% endblock %}
+
+{% block top-nav %}
+<p>top navigation is here</p>
+
+{% endblock %}
+
+{% block main-content %}
+	<p>This is the main content</p>
+
+	<div id="content">
+		<div id="gallery">
+		Signing up with EntreStar 
+		<div class="error">
+		{{message}}
+		</div>
+			<form method="post">{% csrf_token %}
+			<div id="explore">
+				<label for="email"> Email</label>
+				<input type="email" name="email" id ="email" /> <br />
+				<label for="password"> Password</label>
+				<input type="password" name="password" id ="password" />
+				 <div>Account Type </div>
+				 
+				<label for="s">Student </label><input type="radio" id="s" name="type" value="Student" />
+				<label for="e">StartUp </label><input type="radio" id="e" name="type" value="Employer" />
+				
+			</div>
+	
+			<input type="submit" value="Submit" />
+			</form>	
+			
+			Have an Account? <a href="/users/login" >Login</a>
+		</div>
+	
+	</div>
+{% endblock %}
+
+{% block bottom-nav %}
+	<p>bottom navigation is going to be here</p>
+{% endblock %}

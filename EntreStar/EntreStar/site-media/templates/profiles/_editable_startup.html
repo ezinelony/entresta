@@ -1,0 +1,66 @@
+
+<div id="platter">
+	<ul>
+	<li>
+		startup name  
+		<span title="click outside the box to save your changes" id="name" style="z-index: 9999; position:absolute; width:200px; margin:10px;" class="editable" contenteditable=true>{{profile.name}}</span>
+	</li>
+	<li>description  
+	  <span title="click outside the box to save your changes" id="description" style="z-index: 9999; position:absolute;  width:200px;margin:10px; " class="editable" contenteditable=true>{{profile.description}}</span>
+	</li>
+	
+	<li># of employees  
+	  <span title="click outside the box to save your changes" id="employees" style="z-index: 9999; position:absolute;  width:200px;margin:10px; " class="editable" contenteditable=true>{{profile.employees}}</span>
+	</li>
+	</ul>
+
+</div>
+
+<script type="text/javascript">
+	var last=null
+	var last_v=null
+	function update()
+	{
+		
+		if(last !=null)
+			{
+				attr= last.attr('id');
+				value=last.html();
+				if(last_v ==value)
+					return; 
+				$.ajax({
+				    //headers:{"X-CSRFToken":getCookie('csrftoken')},
+				    type:'GET',
+			        url: "/startups/edit",
+			        data: {"attribute":attr,"value":value},		         
+			        success: function(response)
+			        {
+			        	//alert(response)
+			        }
+		        
+		        });
+			
+			}
+	
+	}
+
+	$(function(){
+		$(".editable").click(function(){
+			
+			update();
+			last=$(this);
+			last_v=last.html();
+		})
+		 
+		$(".editable").focusout( function(){
+			update();	
+			last=null;
+			last_v=null;
+		
+		})
+		 
+		
+	});
+	
+
+</script>

@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>entrestar - Home</title>
+		<meta name="author" content="Stelios" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/startup.css" />
+		
+		<script type="text/javascript" src="lib/jquery/js/jquery.js"></script>
+		<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+		    	<div class="container">
+		      		<a class="brand" href="index.html">entrestar</a>
+			    	<ul class="nav">
+							<li><a href="index.html">Home</a></li>
+						  	<li><a href="explore.html">Explore</a></li>
+						  	<li class="logged-in-links"><a href="profile.html">Profile</a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class="dropdown logged-out-links">
+					    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					    		Join
+					        	<b class="caret"></b>
+					    	</a>
+					    	<ul class="dropdown-menu">
+					      		<li><a data-toggle="modal" href="#studentJoinModal">Students</a></li>
+					      		<li><a data-toggle="modal" href="#startupJoinModal">Startups</a></li>
+					    	</ul>
+					  	</li>
+					  	<li class="logged-out-links"><a data-toggle="modal" href="#loginModal">Login</a></li>
+						<li class="dropdown logged-in-links">
+					    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					    		Account
+					        	<b class="caret"></b>
+					    	</a>
+					    	<ul class="dropdown-menu">
+					      		<li><a href="#">Settings</a></li>
+					      		<li><a href="#">Logout</a></li>
+					    	</ul>
+					  	</li>
+					</ul>
+		    	</div>
+	  		</div>
+		</div>
+		<div class="container">
+			<div class="startup-header">
+				<img class="startup-logo" height="68" width="68" alt="Logo" src="http://live.drjays.com/wp-content/uploads/2011/07/spotify-logo.png" />
+				<h1 class="startup-name">Spotify</h1>
+				<div class="startup-star"><img height="30" width="30" alt="Star" src="img/star_unclicked.png"/></div>
+				<div class="startup-location">San Francisco</div>
+				<div class="startup-industry">Software</div>
+			</div>
+			<div class="tabbable tabs-left row-fluid startup-body">
+				<div class="span3">
+					<ul class="nav nav-tabs startup-links">
+				    	<li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+						<li><a href="#jobs" data-toggle="tab">Jobs</a></li>
+				    </ul>
+			    </div>
+			    <div class="span9">
+				  	<div class="tab-content startup-profile">
+				    	<div class="tab-pane active" id="info">
+							<div class="startup-content">
+								<div class="startup-about">
+									<h2>About</h2>
+									<div>Think of Spotify as your new music collection. Your library. Only this time your collection is vast: millions of tracks and counting. Spotify comes in all shapes and sizes, available for your PC, Mac, home audio system and mobile phone. Wherever you go, your music follows you.</div>
+								</div>
+								<div class="startup-website">
+									<h2>Website</h2>
+									<a href="http://www.spotify.com">spotify.com</a>
+								</div>
+								<div id="misc" class="ul-table" >
+									<h2>Misc</h2>
+									<ul>
+										<li>Employees:</li>
+										<li>Funding:</li>
+										<li>Founded:</li>
+										<li>Headquarters:</li>
+									</ul>
+									<ul>
+										<li>200</li>
+										<li>183M</li>
+										<li>12/2009</li>
+										<li>Stockholm, SWE</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+	    				<div class="tab-pane" id="jobs">
+	      					<div class="startup-internships">
+								<h2>Internships</h2>
+								<div class="internship">
+									<table class="table result-jobs">
+										<tbody>
+											<tr class="result-job">
+												<td class="result-job-title"><a href="#job" data-toggle="tab">UX Designer</a></td>
+												<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+												<td class="result-job-location">San Francisco</td>
+											</tr>
+											<tr class="result-job">
+												<td class="result-job-title"><a href="#job" data-toggle="tab">Software Engineer</a></td>
+												<td class="result-job-skills">C#, Python</td>
+												<td class="result-job-location">San Francisco</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
+							
+							<div class="startup-fulltime">
+								<h2>Fulltime</h2>
+								<div class="internship">
+									<table class="table result-jobs">
+										<tbody>
+											<tr class="result-job">
+												<td class="result-job-title"><a href="#job" data-toggle="tab">UX Designer</a></td>
+												<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+												<td class="result-job-location">San Francisco</td>
+											</tr>
+											<tr class="result-job">
+												<td class="result-job-title"><a href="#job" data-toggle="tab">Software Engineer</a></td>
+												<td class="result-job-skills">C#, Python</td>
+												<td class="result-job-location">San Francisco</td>
+											</tr>
+											<tr class="result-job">
+												<td class="result-job-title"><a href="#job" data-toggle="tab">UX Designer</a></td>
+												<td class="result-job-skills">Adobe Fireworks, wireframing tools</td>
+												<td class="result-job-location">San Francisco</td>
+											</tr>
+											<tr class="result-job">
+												<td class="result-job-title"><a href="#job" data-toggle="tab">Software Engineer</a></td>
+												<td class="result-job-skills">C#, Python</td>
+												<td class="result-job-location">San Francisco</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+	    				</div>
+	    				<div class="tab-pane" id="job">
+	    					<div class="job">
+		    					<div class="job-title">
+		    						<h2>Software Engineer</h2>
+		    						<div class="job-star pull-right"><img height="30" width="30" alt="Star" src="img/star_unclicked.png"/></div>
+		    					</div>
+		    					<div>Internship</div>
+		    					<div class="job-about">
+			    					<h3>About</h3>
+			    					<div>We’re looking for a talented and passionate full-time Software Engineer to lead the design and implementation of our powerful yet easy to use software product.</div>
+		    					</div>
+		    					<div class="job-responsibilities">
+			    					<h3>Responsibilities</h3>
+			    					<ul>
+			    						<li>Own the development process of our software product.</li>
+			    						<li>Develop geometry analysis and generation algorithms for smart 3D printing.</li>
+			    						<li>Create the cross-platform software user interface to our device</li>
+			    						<li>Work closely with hardware engineers to integrate PC software drivers and embedded machine control systems</li>
+			    					</ul>
+		    					</div>
+		    					<div class="job-skills">
+			    					<h3>Skills and Requirements</h3>
+			    					<ul>
+			    						<li>Proficiency with C#, Python. More languages a plus.</li>
+			    						<li>The ability to understand how the lowest level algorithm design choices affect the user experience all the way out to the final printed part.</li>
+			    						<li>Someone who is passionate about rapid prototyping.</li>
+			    					</ul>
+		    					</div>
+		    					<div class="job-misc">
+		    						<div class="ul-table">	
+										<h3>Misc</h3>
+										<ul>
+											<li>Compensation:</li>
+											<li>Duration:</li>
+											<li>Benefits:</li>
+										</ul>
+										<ul>
+											<li>Unpaid</li>
+											<li>June - August, 2012</li>
+											<li>Medical insurance, free snacks and drinks</li>
+										</ul>
+									</div>
+		    					</div>
+		    					<div class="btn btn-primary btn-large pull-right">Apply</div>
+	    					</div>
+	    				</div>
+				  	</div>
+			  	</div>
+			</div>
+		</div>
+		
+		<div class="modal" id="loginModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>login</h3>
+		  	</div>
+		  	<div class="modal-body">
+		    	<form class="form">
+		    		<input type="email" placeholder="email">
+		    		<br />
+		    		<input type="password" placeholder="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="btn btn-large">Close</a>
+		    	<a href="#" class="btn btn-primary btn-large">Login</a>
+		  	</div>
+		</div>
+		
+		<div class="modal" id="studentJoinModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>new student account</h3>
+		  	</div>
+		  	<div class="modal-body">
+		    	<form class="form">
+		    		<input type="email" placeholder="email">
+		    		<br />
+		    		<input type="password" placeholder="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="btn btn-large">Close</a>
+		    	<a href="#" class="btn btn-primary btn-large">Join</a>
+		  	</div>
+		</div>
+		
+		<div class="modal" id="startupJoinModal">
+			<div class="modal-header">
+		    	<a class="close" data-dismiss="modal">×</a>
+		    	<h3>new startup account</h3>
+		  	</div>
+		  	<div class="modal-body">
+		    	<form class="form">
+		    		<input type="text" placeholder="startup name">
+		    		<br />
+		    		<input type="email" placeholder="email">
+		    		<br />
+		    		<input type="password" placeholder="password">
+		    	</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<a href="#" data-dismiss="modal" class="btn btn-large">Close</a>
+		    	<a href="#" class="btn btn-primary btn-large">Join</a>
+		  	</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				
+				/*
+				 * State:
+				 * 	0: logged off
+				 *  1: logged in as student
+				 * 	2: logged in as startup
+				 */
+				var state = 0;
+				
+				switch (state) {
+					case 0:
+						$('.logged-in-links').hide();
+						break;
+					case 1:
+						$('.logged-out-links').hide();
+						break; 
+					case 2:
+						$('.logged-out-links').hide();
+						break;
+					default:
+						alert('No such state');
+						break;
+				}
+				
+				$('#studentJoinModal').hide();
+				$('#startupJoinModal').hide();
+				$('#loginModal').hide();
+				
+				$('.result-job a').click(function() {
+					$('.startup-links > *').removeClass('active');
+				});
+				
+				$(".startup-star > img").click(function() {
+					if ($(this).attr("src") === "img/star_unclicked.png")
+						$(this).attr('src', 'img/star_clicked.png');
+					else
+						$(this).attr('src', 'img/star_unclicked.png');	
+				});
+				
+				$(".job-star > img").click(function() {
+					if ($(this).attr("src") === "img/star_unclicked.png")
+						$(this).attr('src', 'img/star_clicked.png');
+					else
+						$(this).attr('src', 'img/star_unclicked.png');	
+				});
+			});
+		</script>
+	</body>
+</html>

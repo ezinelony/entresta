@@ -1,0 +1,108 @@
+/*********************************************************
+ * Startup.html
+ *********************************************************/
+
+/*********************************************************
+ * 1. Startup header
+ *********************************************************/
+
+.startup-links a {
+	width: 160px;
+}
+
+.startup-links {
+	height: 600px;
+}
+
+.startup-header {
+	margin-top: 40px;
+}
+
+.startup-logo, 
+.startup-name, 
+.startup-industry, 
+.startup-location {
+	float: left;
+}
+
+.startup-industry, .startup-location, .startup-star {
+	float: right;
+}
+
+.startup-name {
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 80px;
+}
+
+.startup-industry, 
+.startup-location {
+	margin-top: 25px;
+	font-size: 1.2em;
+}
+
+.startup-location {
+	margin-left: 30px;
+	margin-right: 60px;
+}
+
+.startup-star {
+	margin-top: 18px;
+}
+
+.startup-star > img,
+.job-star > img {
+	cursor: pointer;
+}
+
+/*********************************************************
+ * 2. Startup Profile
+ *********************************************************/
+
+.startup-body {
+	clear: both;
+	margin-top: 170px;
+}
+
+.startup-links a {
+	font-size: 1.4em;
+}
+
+.startup-website h2,
+.ul-table h2,
+.ul-table h3,
+.job-about h3,
+.job-responsibilities h3,
+.job-skills h3 {
+	margin-top: 30px;
+}
+
+.startup-about div, a, li,
+.job div, a, li {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.ul-table ul {
+	float: left;
+	list-style: none;
+	margin-left: 0;
+	margin-right: 40px;
+}
+
+.startup-fulltime {
+	margin-top: 30px;
+}
+
+.job > * {
+	display: block;
+	overflow: hidden;
+}
+
+.job-title > * {
+	display: inline-block;
+}
+
+#job .btn {
+	margin-bottom: 0px;
+}

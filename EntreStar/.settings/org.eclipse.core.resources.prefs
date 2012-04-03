@@ -1,0 +1,11 @@
+#Sun Apr 01 14:10:54 EDT 2012
+eclipse.preferences.version=1
+encoding//EntreStar/autoslug/__init__.py=utf-8
+encoding//EntreStar/autoslug/fields.py=utf-8
+encoding//EntreStar/autoslug/settings.py=utf-8
+encoding//EntreStar/autoslug/tests.py=utf-8
+encoding//EntreStar/autoslug/utils.py=utf-8
+encoding//EntreStar/site-media/templates/index.html=UTF-8
+encoding//EntreStar/site-media/templates/users/login.html=UTF-8
+encoding//EntreStar/site-media/templates/users/startup_join.html=UTF-8
+encoding//EntreStar/site-media/templates/users/student_join.html=UTF-8
