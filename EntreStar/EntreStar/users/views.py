@@ -50,6 +50,7 @@ def signup(request):
                 return HttpResponse(json_obj, mimetype='application/json')
     return render_to_response('users/signup.html', c)
 
+# user.cast()
 def createUser(request): 
     msg='' 
     error=0             
@@ -65,15 +66,16 @@ def createUser(request):
         user =authenticate(username=request.POST['email'], password=request.POST['password'])
         login(request,user)  
         if user.is_authenticated():
-            profile_link="/profile"
+            #profile_link="/profile"
+            
+            profile_link="/profile/u"
             if request.POST['type'] =='Company' :
-                
                 profile= CompanyProfile()
                 profile.owner=userdao
                 profile.ownerType="CompanyProfile"
                 profile.name=request.POST['name']
                 profile.save()
-                profile_link="/"+profile.slug
+                profile_link="/profile/"+ str(profile.id)#profile.slug
 
         if 'async' in request.POST :
             if  request.POST['async']=='1' :
@@ -150,7 +152,7 @@ def logUserIn(request):
     return 1
       
 def sjoin(request):
-    userLogout(request)
+    #userLogout(request)
     ref =getReferrer(request,'sjoin') 
     request.session['ref'] = ref 
     if request.user.is_authenticated():
@@ -169,9 +171,10 @@ def pjoin(request):
     return render_to_response('users/startup_join.html', c)  
  
 def userLogout(request):
+    print "Site--"
     logout(request)
     if 'ref' in request.session:
         del request.session['ref']
     ref =getReferrer(request,'logout')    
-    return  HttpResponseRedirect(ref)
+    return  HttpResponseRedirect("/")
     

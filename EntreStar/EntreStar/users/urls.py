@@ -6,6 +6,7 @@ urlpatterns = patterns('EntreStar.users.views',
     (r'^logout$', 'userLogout'),
     (r'^student_join', 'sjoin'),
     (r'^startup_join', 'pjoin'),
+    
  
 )
 

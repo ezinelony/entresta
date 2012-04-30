@@ -39,7 +39,7 @@ class CompanyProfile(Profile):
     slug = AutoSlugField(populate_from='name', unique=True,max_length=255)
     logo =models.ImageField(upload_to=LOGO_URL,null=True, blank=True)
     external_logo=models.URLField(null=True, blank=True)
- 
+    #fbook= models.CharField(max_length=200,null=False)
     
 class StudentProfile(Profile):
     resume =  models.FileField(upload_to=RESUME_URL,null=True, blank=True) 

@@ -12,7 +12,7 @@ class StarUser(User, Polymorph):
     #type = models.CharField(max_length=100, blank=False)
     
     def is_company(self):
-        return True
+        return self.cast().real_type=="company"
     
 class Student(StarUser):
     objects=UserManager() 

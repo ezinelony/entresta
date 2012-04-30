@@ -35,7 +35,11 @@
 							<li class="active"><a href="index.html">Home</a></li>
 						  	<li><a href="explore.html">Explore</a></li>
 						  	{% if  user.is_authenticated %}
-						  		<li class="logged-in-links"><a href="index.html">Profile</a></li>
+						  		{% if user.cast.profile.is_company%}						  			
+						  			<li class="logged-in-links"><a href="/profiles/{{user.cast.profile.id}}">Profile</a></li>
+					  			{% else %}
+					  				<li class="logged-in-links"><a href="/profile/u">Profile</a></li>
+					  			{% endif %}
 					  		{% endif %}
 					</ul>
 					<ul class="nav pull-right">

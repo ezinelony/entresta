@@ -11,7 +11,6 @@ from EntreStar.documents.models import Image, Document
 from EntreStar.users.models import Student, Company
 from EntreStar.profiles.forms import StudentProfileForm
 from EntreStar.settings import PROJECT_PATH, LOGO_URL
-from StdSuites.Type_Names_Suite import null
 from django.http import HttpResponseRedirect, HttpResponse
 import json
 
@@ -26,7 +25,7 @@ def new(request):
 @login_required(login_url="/")
 def profile(request):
     #if usr is not student redirect to startup
-    
+    print "----"
     if not request.method=='POST':
         return newStudentProflie(request)
     return createNewStudentProflie(request)
@@ -97,7 +96,8 @@ def createNewStudentProflie(request):
     return render_to_response("profiles/index.html", c)
 
 def startup(request,id):
-
+    print str(id)+""
+    
     ref=getReferrer(request,'startup')
     request.session['ref'] = ref 
     try:
