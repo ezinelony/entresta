@@ -96,7 +96,7 @@ def createNewStudentProflie(request):
     return render_to_response("profiles/index.html", c)
 
 def startup(request,id):
-    print str(id)+""
+    print "===="
     
     ref=getReferrer(request,'startup')
     request.session['ref'] = ref 
